@@ -1,5 +1,5 @@
 # Пример 2
-### до (ЦС = 16)
+## до (ЦС = 16)
 ```python
 def main():
     params = get_params()
@@ -127,10 +127,10 @@ def main():
     logger.log('Application finished')
 ```
 
-### после (ЦС "main" функции = 3)
+## после (ЦС "main" функции = 3)
+### решение: вынес 4 блока кода в отдельные функции,
+### избавился от else и излишних if-ов, использовал тернарные операторы
 ```python
-# решение: вынес 4 блока кода в отдельные функции,
-# избавился от else и излишних if-ов, использовал тернарные операторы
 ...
 def get_tables_for_compacted(params, tables) -> list:
     if params.table and params.table != '':
