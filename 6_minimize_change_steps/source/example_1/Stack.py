@@ -48,4 +48,4 @@ class Stack(AbsStack):
         return self.stack[-1]
 
     def size(self) -> int:
-        ...
+        return len(self.stack)
