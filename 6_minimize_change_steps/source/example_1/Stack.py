@@ -35,7 +35,7 @@ class Stack(AbsStack):
         self.stack = []
 
     def push(self, value: T) -> None:
-        ...
+        self.stack.append(value)
 
     def pop(self) -> None:
         ...
