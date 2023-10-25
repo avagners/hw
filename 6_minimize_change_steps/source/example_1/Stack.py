@@ -27,3 +27,21 @@ class AbsStack(ABC, Generic[T]):
     def peek(self) -> T: ...  # возвращает верхний элемент списка
     @abstractmethod
     def size(self) -> int: ...
+
+
+# Реализация стека
+class Stack(AbsStack):
+    def __init__(self):
+        self.stack = []
+
+    def push(self, value: T) -> None:
+        ...
+
+    def pop(self) -> None:
+        ...
+
+    def peek(self) -> T:
+        ...
+
+    def size(self) -> int:
+        ...
