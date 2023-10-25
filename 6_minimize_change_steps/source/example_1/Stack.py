@@ -43,7 +43,9 @@ class Stack(AbsStack):
         return self.stack.pop()
 
     def peek(self) -> T:
-        ...
+        if not self.stack:
+            return None
+        return self.stack[-1]
 
     def size(self) -> int:
         ...
