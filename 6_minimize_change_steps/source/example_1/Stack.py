@@ -38,7 +38,9 @@ class Stack(AbsStack):
         self.stack.append(value)
 
     def pop(self) -> None:
-        ...
+        if not self.stack:
+            return None
+        return self.stack.pop()
 
     def peek(self) -> T:
         ...
