@@ -18,12 +18,12 @@ class AbsDeque(ABC, Generic[T]):
 
     # постусловие: в хвост дека добавлено новый элемент
     @abstractmethod
-    def addTail(self, value: T) -> None: ...
+    def addTail(self, value: T) -> T: ...
 
     # предусловие: дек не пустой
     # постусловие: из головы дека удалён элемент
     @abstractmethod
-    def removeFront(self) -> None: ...
+    def removeFront(self) -> T: ...
 
     # предусловие: дек не пустой
     # постусловие: из хвоста дека удалён элемент
@@ -52,7 +52,9 @@ class Deque(AbsDeque):
         return None
 
     def removeTail(self) -> None:
-        ...
+        if not self.deque:
+            return None
+        return self.deque.pop()
 
     def size(self) -> int:
         ...
