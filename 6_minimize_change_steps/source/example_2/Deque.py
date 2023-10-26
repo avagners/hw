@@ -33,3 +33,24 @@ class AbsDeque(ABC, Generic[T]):
     # Запросы:
     @abstractmethod
     def size(self) -> int: ... # возвращает размер дека
+
+
+class Deque(AbsDeque):
+
+    def __init__(self):
+        self.deque = []
+
+    def addFront(self, value: T) -> None:
+        ...
+    
+    def addTail(self, value: T) -> None:
+        ...
+
+    def removeFront(self) -> None:
+        ...
+
+    def removeTail(self) -> None:
+        ...
+
+    def size(self) -> int:
+        ...
