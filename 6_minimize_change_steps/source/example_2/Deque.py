@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import TypeVar, Generic
+from typing import TypeVar, Generic, Optional
 
 T = TypeVar('T')
 
@@ -18,17 +18,17 @@ class AbsDeque(ABC, Generic[T]):
 
     # постусловие: в хвост дека добавлено новый элемент
     @abstractmethod
-    def addTail(self, value: T) -> T: ...
+    def addTail(self, value: T) -> None: ...
 
     # предусловие: дек не пустой
     # постусловие: из головы дека удалён элемент
     @abstractmethod
-    def removeFront(self) -> T: ...
+    def removeFront(self) -> Optional[T]: ...
 
     # предусловие: дек не пустой
     # постусловие: из хвоста дека удалён элемент
     @abstractmethod
-    def removeTail(self) -> None: ...
+    def removeTail(self) -> Optional[T]: ...
 
     # Запросы:
     @abstractmethod
@@ -46,12 +46,12 @@ class Deque(AbsDeque):
     def addTail(self, value: T) -> None:
         self.deque.append(value)
 
-    def removeFront(self) -> None:
+    def removeFront(self) -> Optional[T]:
         if self.deque:
             return self.deque.pop(0)
         return None
 
-    def removeTail(self) -> None:
+    def removeTail(self) -> Optional[T]:
         if not self.deque:
             return None
         return self.deque.pop()
