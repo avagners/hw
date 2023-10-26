@@ -57,4 +57,4 @@ class Deque(AbsDeque):
         return self.deque.pop()
 
     def size(self) -> int:
-        ...
+        return len(self.deque)
