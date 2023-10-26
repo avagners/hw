@@ -44,7 +44,7 @@ class Deque(AbsDeque):
         self.deque.insert(0, value)
     
     def addTail(self, value: T) -> None:
-        ...
+        self.deque.append(value)
 
     def removeFront(self) -> None:
         ...
