@@ -63,6 +63,19 @@ class TestDeque(unittest.TestCase):
         self.assertIsNone(result_remove)
         self.assertListEqual(self.s_deque.deque, [])
 
+    def test_size(self):
+        len_queue = len(self.s_deque.deque)
+        self.assertEqual(self.s_deque.size(), len_queue, 0)
+        item = random.randint(0, 100)
+        self.s_deque.addFront(item)
+        self.assertEqual(self.s_deque.size(), len_queue + 1)
+        item = random.randint(0, 100)
+        self.s_deque.addFront(item)
+        self.assertEqual(self.s_deque.size(), len_queue + 2)
+        self.s_deque.removeTail()
+        self.assertEqual(self.s_deque.size(), len_queue + 1)
+        self.s_deque.removeFront()
+        self.assertEqual(self.s_deque.size(), len_queue)
 
 if __name__ == '__main__':
     unittest.main()
