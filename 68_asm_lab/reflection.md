@@ -1,6 +1,6 @@
 # 2-3 программы на ассемблере x86-64
 
-## 1. Hello, World (hello.asm)
+## 1. Hello, World ([hello.asm](./1_hello_asm/src/hello.asm))
 Чему научился:
 - Структура программы: Понял, что программа делится на секции .data (данные) и .text (код)
 - Системные вызовы: Осознал, что все взаимодействия с ОС происходят через syscall
@@ -12,7 +12,7 @@
 - Узнал про номера системных вызовов (1 = write, 60 = exit)
 - Понял важность корректного завершения программы
 
-## 2. Add Numbers (add_numbers_input.asm)
+## 2. Add Numbers ([add_numbers_input.asm](./2_add_numbers_asm/src/add_numbers_input.asm))
 
 Чему научился:
 - Работа с памятью: Понял разницу между .data (константы) и .bss (переменные)
@@ -36,7 +36,7 @@ section .bss
 - Использование регистров для передачи аргументов (rdi) и возврата результатов (rax)
 - Отладка многошаговых программ
 
-## 3. Dynamic Array (dynarray.asm)
+## 3. Dynamic Array ([dynarray.asm](./3_dynarray_asm/src/dynarray.asm))
 
 Чему научился:
 - Динамическая память: Освоил системные вызовы для управления памятью (mmap, munmap)
