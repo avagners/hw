@@ -21,11 +21,11 @@ class UserService:
         pass
     
     def send_email(self, user_id: int, message: str) -> bool:
-        pass  # 🤦 Это уже не ответственность UserService!
+        pass
 
 
 class UserProfileController:
-    def __init__(self, user_service: UserService):  # Зависит от всех методов!
+    def __init__(self, user_service: UserService):  # Зависит от всех методов
         self.user_service = user_service
     
     def get_profile(self, user_id: int):
