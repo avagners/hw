@@ -2,7 +2,7 @@
 
 ## 1. Дублирование кода
 
-Классы `NotifyChannel`, `NotifyInitiator` и `NotifyPerformer` содержат значительное дублирование кода.
+Классы `NotifyChannel`, `NotifyInitiator` и `NotifyPerformer` содержат значительное дублирование кода.  
 **Запах**: Методы, такие как `when_task_assigned`, `when_task_success_executed`, `when_task_rejected` и т.д., имеют почти идентичную структуру.
 
 #### ДО:
